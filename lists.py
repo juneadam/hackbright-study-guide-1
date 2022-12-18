@@ -217,6 +217,7 @@ def mult_numbers(numbers):
         1
     """
 
+
     return None
 
 
@@ -302,7 +303,9 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    return []
+    reversed_list = items[::-1]
+
+    return reversed_list
 
 
 def reverse_list_in_place(items):
