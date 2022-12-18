@@ -131,6 +131,9 @@ def num_spaces(sentence):
 #    (price + price * tip). **However:** passing in the tip percentage should
 #    be optional; if not given, it should default to 15%.
 
+def total_meal_price(price, tip=0.15):
+
+    return price + price * tip
 
 # 9. Write a function called 'sign_and_parity' that takes an integer as an
 #    argument and returns two pieces of information as strings --- "Positive"
@@ -140,6 +143,24 @@ def num_spaces(sentence):
 #    Then, write code that shows the calling of this function on a number and
 #    unpack what is returned into two variables --- sign and parity (whether
 #    it's even or odd). Print sign and parity.
+
+def sign_and_parity(x):
+    output_list = []
+    if x >= 0:
+        output_list.append('Positive')
+    if x < 0:
+        output_list.append('Negative')
+    if x % 2 == 0:
+        output_list.append('Even')
+    if x % 2 != 0:
+        output_list.append('Odd')
+    
+    return output_list
+
+x = sign_and_parity(-7)
+sign = x[0]
+parity = x[1]
+print(f'{sign} {parity}')
 
 
 ###############################################################################
