@@ -416,7 +416,18 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
-    return []
+    indices_list = []
+
+    for word in words:
+        for i, char in enumerate(word):
+            char_count = int()
+            if char == letter and char_count < 1:
+                indices_list.append(i)
+                char_count += 1
+        if letter not in word:
+            indices_list.append(None)
+
+    return indices_list
 
 
 #####################################################################
