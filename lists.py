@@ -37,8 +37,13 @@ def long_words(words):
         >>> long_words(["all", "are", "tiny"])
         []
     """
+    word_bank = []
 
-    return ['the wrong thing']
+    for word in words:
+        if len(word) > 4:
+            word_bank.append(word)
+
+    return word_bank
 
 
 def n_long_words(words, n):
@@ -55,7 +60,13 @@ def n_long_words(words, n):
         ['apples', 'bananas']
     """
 
-    return ['the wrong thing']
+    word_bank = []
+
+    for word in words:
+        if len(word) > n:
+            word_bank.append(word)
+
+    return word_bank
 
 
 def smallest_int(numbers):
@@ -74,8 +85,18 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
+    lowest_num = int()
 
-    return 100
+    if len(numbers) > 0:
+        lowest_num = numbers[0]
+    else:
+        return None
+
+    for number in numbers:
+        if number < lowest_num:
+            lowest_num = number
+
+    return lowest_num
 
 
 def largest_int(numbers):
@@ -95,7 +116,18 @@ def largest_int(numbers):
         True
     """
 
-    return 0
+    highest_num = int()
+
+    if len(numbers) > 0:
+        highest_num = numbers[0]
+    else:
+        return None
+
+    for number in numbers:
+        if number > highest_num:
+            highest_num = number
+
+    return highest_num
 
 
 def halvesies(numbers):
@@ -113,7 +145,12 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
-    return []
+    halves_list = []
+
+    for number in numbers:
+        halves_list.append(number / 2)
+
+    return halves_list
 
 
 def word_lengths(words):
@@ -125,7 +162,12 @@ def word_lengths(words):
         [5, 3, 5, 4]
     """
 
-    return []
+    word_length_list = []
+
+    for word in words:
+        word_length_list.append(len(word))
+
+    return word_length_list
 
 
 def sum_numbers(numbers):
@@ -144,7 +186,15 @@ def sum_numbers(numbers):
         0
     """
 
-    return None
+    list_sum = int()
+
+    if len(numbers) == 0:
+        return 0
+    else:
+        for number in numbers:
+            list_sum += number
+
+    return list_sum
 
 
 def mult_numbers(numbers):
