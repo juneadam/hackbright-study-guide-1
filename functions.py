@@ -89,20 +89,42 @@ def print_product(a, b):
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
 
+def repeat_string(input, int):
+    return
+
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
 #    "Higher than 0" if higher than zero and "Lower than 0" if lower than zero.
 #    If the integer is zero, print "Zero".
 
+def print_sign(x):
+    if x > 0:
+        print("Higher than 0")
+    if x < 0:
+        print("Lower than 0")
+    if x == 0:
+        print("Zero")
 
 # 6. Write a function called 'is_divisible_by_three' that takes an integer and
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
 
+def is_divisible_by_three(x):
+    if x % 3 == 0:
+        return True
+    else:
+        return False
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
 
+def num_spaces(sentence):
+    space_count_total = 0
+    for char in sentence:
+        if char == " ":
+            space_count_total += 1
+    
+    return space_count_total
 
 # 8. Write a function called 'total_meal_price' that can be passed a meal price
 #    and a tip percentage. It should return the total amount paid
