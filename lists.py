@@ -217,8 +217,15 @@ def mult_numbers(numbers):
         1
     """
 
+    total = 1
 
-    return None
+    for num in numbers:
+        if len(numbers) == 0:
+            return 1
+        else:
+            total = total * num
+
+    return total
 
 
 def join_strings(words):
@@ -237,7 +244,12 @@ def join_strings(words):
         ''
     """
 
-    return "Not the right thing"
+    joined_string = ''
+
+    for word in words:
+        joined_string += word
+
+    return joined_string
 
 
 def average(numbers):
